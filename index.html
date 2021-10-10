@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="profile-header">
+        <div class="profile-top">
+          <img
+            src="images/image-jeremy.png"
+            alt="profile picture"
+            class="profile-picture"
+          />
+          <div class="profile-desc">
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="time-btn-container">
+          <button class="time-btn">Daily</button>
+          <button class="time-btn">Weekly</button>
+          <button class="time-btn">Monthly</button>
+        </div>
+      </section>
+      <section class="card-Work">
+        <div class="desc-container">
+          <div class="top-desc">
+            <h2 id="header-Work"></h2>
+            <button>...</button>
+          </div>
+          <div class="middle-desc">
+            <p class="time" id="current-Work"></p>
+          </div>
+          <div class="bottom-desc">
+            <p class="last-time">Yesterday</p>
+            <p id="previous-Work" class="need-space"></p>
+          </div>
+        </div>
+      </section>
+      <section class="card-Play">
+        <div class="desc-container">
+          <div class="top-desc">
+            <h2 id="header-Play"></h2>
+            <button>...</button>
+          </div>
+          <div class="middle-desc">
+            <p class="time" id="current-Play"></p>
+          </div>
+          <div class="bottom-desc">
+            <p class="last-time">Yesterday -</p>
+            <p id="previous-Play" class="need-space"></p>
+          </div>
+        </div>
+      </section>
+      <section class="card-Study">
+        <div class="desc-container">
+          <div class="top-desc">
+            <h2 id="header-Study"></h2>
+            <button>...</button>
+          </div>
+          <div class="middle-desc">
+            <p class="time" id="current-Study"></p>
+          </div>
+          <div class="bottom-desc">
+            <p class="last-time">Yesterday -</p>
+            <p id="previous-Study" class="need-space"></p>
+          </div>
+        </div>
+      </section>
+      <section class="card-Exercise">
+        <div class="desc-container">
+          <div class="top-desc">
+            <h2 id="header-Exercise"></h2>
+            <button>...</button>
+          </div>
+          <div class="middle-desc">
+            <p class="time" id="current-Exercise"></p>
+          </div>
+          <div class="bottom-desc">
+            <p class="last-time">Yesterday -</p>
+            <p id="previous-Exercise" class="need-space"></p>
+          </div>
+        </div>
+      </section>
+      <section class="card-Social">
+        <div class="desc-container">
+          <div class="top-desc">
+            <h2 id="header-Social"></h2>
+            <button>...</button>
+          </div>
+          <div class="middle-desc">
+            <p class="time" id="current-Social"></p>
+          </div>
+          <div class="bottom-desc">
+            <p class="last-time">Yesterday -</p>
+            <p id="previous-Social" class="need-space"></p>
+          </div>
+        </div>
+      </section>
+      <section class="card-SelfCare">
+        <div class="desc-container">
+          <div class="top-desc">
+            <h2 id="header-SelfCare"></h2>
+            <button>...</button>
+          </div>
+          <div class="middle-desc">
+            <p class="time" id="current-SelfCare"></p>
+          </div>
+          <div class="bottom-desc">
+            <p class="last-time">Yesterday -</p>
+            <p id="previous-SelfCare" class="need-space"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/peter9294">peter9294</a>.
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

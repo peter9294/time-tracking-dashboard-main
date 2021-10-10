@@ -1,0 +1,276 @@
+:root {
+  /* ### Primary */
+
+  --Blue: hsl(246, 80%, 60%);
+
+  --Orange: hsl(15, 100%, 70%);
+  --Soft-blue: hsl(195, 74%, 62%);
+  --Light-red: hsl(348, 100%, 68%);
+  --Lime-green: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Yellow: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+  background-color: var(--Very-dark-blue);
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "header work play study"
+    "header exercise social self-care";
+  column-gap: 25px;
+  row-gap: 25px;
+  margin-top: 30px;
+}
+
+section {
+  height: 230px;
+  width: 240px;
+  z-index: 0;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: var(--Desaturated-blue);
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+button:hover {
+  color: white;
+}
+
+/* Profile  */
+
+.profile-picture {
+  border-radius: 100%;
+  border: solid 2px white;
+  width: 65px;
+  position: relative;
+  top: 10px;
+}
+
+.profile-header {
+  background-color: var(--Dark-blue);
+  border-radius: 20px;
+  grid-area: header;
+  z-index: 0;
+  height: 490px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.profile-top {
+  background-color: #6f76c8;
+  border-radius: 20px;
+  padding: 20px;
+  height: 300px;
+}
+.profile-desc {
+  position: relative;
+  top: 50px;
+}
+.profile-top h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.profile-top p {
+  color: var(--Pale-blue);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.time-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding-left: 20px;
+  margin-bottom: 33px;
+}
+
+/* Card */
+
+.desc-container {
+  background-color: var(--Dark-blue);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  top: 50px;
+  padding: 15px 25px;
+  z-index: 1;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.desc-container:hover {
+  background-color: var(--Desaturated-blue);
+}
+
+.img-header {
+  position: absolute;
+  z-index: -1;
+  margin-left: 150px;
+  width: 70px;
+}
+
+.top-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  margin-bottom: 5px;
+}
+
+.top-desc button {
+  min-height: auto;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: var(--Pale-blue);
+}
+
+.time {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: auto;
+}
+
+.bottom-desc {
+  color: var(--Pale-blue);
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+}
+
+.card-Work {
+  background-color: var(--Orange);
+  border-radius: 20px;
+}
+
+.card-Play {
+  background-color: var(--Soft-blue);
+  border-radius: 20px;
+}
+
+.card-Study {
+  background-color: var(--Light-red);
+  border-radius: 20px;
+}
+
+.card-Exercise {
+  background-color: var(--Lime-green);
+  border-radius: 20px;
+}
+
+.card-Social {
+  background-color: var(--Violet);
+  border-radius: 20px;
+}
+
+.card-SelfCare {
+  background-color: var(--Yellow);
+  border-radius: 20px;
+}
+
+.need-space {
+  position: relative;
+  left: 5px;
+}
+
+@media (max-width: 1000px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  section {
+    width: 350px;
+    height: 180px;
+  }
+  .profile-picture {
+    float: left;
+    top: 15px;
+  }
+
+  .profile-top {
+    height: 100px;
+  }
+
+  .profile-desc {
+    top: 25px;
+    left: 12px;
+  }
+  .profile-header {
+    height: 200px;
+  }
+
+  .profile-header h1 {
+    font-size: 2rem;
+  }
+
+  .time-btn-container {
+    margin-bottom: 20px;
+    padding-right: 15px;
+  }
+
+  .time-btn-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .desc-container {
+    display: block;
+    height: 110px;
+  }
+
+  .middle-desc {
+    float: left;
+    width: 160px;
+  }
+  .bottom-desc {
+    width: 140px;
+    justify-content: flex-end;
+  }
+
+  .img-header {
+    margin-left: 250px;
+  }
+}
